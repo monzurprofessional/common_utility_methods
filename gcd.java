@@ -5,6 +5,7 @@ public class gcd{
          int[] arr = {18, 24, 30};
          System.out.println(GCD_array(arr));
     }
+    //using while loop
     static int gcd(int a , int b){
         while(b!=0){
             int temp = b;
@@ -13,17 +14,18 @@ public class gcd{
         }
         return a;
     }
+    //recursive
     static int GCD(int a, int b){
         if(b==0) return a;
         return GCD(b, a%b);
     }
     static int GCD_array(int [] arr){
-        
         int result = arr[0];
         for (int i = 1; i < arr.length; i++) {
-            result=GCD(result, arr[i]);
+            result=GCD(result, arr[i]); //build a gcd method of 2 element first
         }
         return result;
     }
+
 
 }
